@@ -577,3 +577,342 @@ transform:translate(-50%,0);
 }
 
 }
+
+/* ==========================================
+   LIGHTWALA STYLE.CSS PART 3
+   Responsive + Glass + Hero Effects
+========================================== */
+
+/* Glass Glow */
+
+.hero::before{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    background:rgba(255,255,255,.05);
+    filter:blur(100px);
+    right:0;
+    top:100px;
+    z-index:-1;
+}
+
+/* Hero Text Animation */
+
+.left h1{
+    animation:heroText 2s ease;
+}
+
+.left h2{
+    animation:heroText 2.5s ease;
+}
+
+.left p{
+    animation:heroText 3s ease;
+}
+
+.buttons{
+    animation:heroText 3.5s ease;
+}
+
+@keyframes heroText{
+
+0%{
+opacity:0;
+transform:translateY(50px);
+}
+
+100%{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* Circle Glow */
+
+.circle::before{
+
+content:"";
+position:absolute;
+width:360px;
+height:360px;
+border-radius:50%;
+border:3px dashed rgba(255,255,255,.3);
+animation:rotateReverse 20s linear infinite;
+
+}
+
+@keyframes rotateReverse{
+
+0%{
+transform:rotate(360deg);
+}
+
+100%{
+transform:rotate(0deg);
+}
+
+}
+
+/* Hover Effects */
+
+.logo:hover{
+transform:scale(1.05);
+transition:.4s;
+text-shadow:
+0 0 10px #fff,
+0 0 20px #ff00ff,
+0 0 30px cyan;
+}
+
+.left h1:hover{
+
+text-shadow:
+0 0 10px #fff,
+0 0 25px #ff00ff,
+0 0 40px cyan;
+
+transition:.5s;
+
+}
+
+.left h2:hover{
+
+color:#ffcc00;
+
+transition:.4s;
+
+}
+
+/* Button Hover */
+
+.book-btn:hover{
+
+transform:translateY(-4px);
+box-shadow:
+0 0 15px #ff00ff,
+0 0 30px cyan,
+0 0 45px yellow;
+
+}
+
+/* Scroll Bar */
+
+::-webkit-scrollbar{
+
+width:8px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#111;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:linear-gradient(
+to bottom,
+#ff0080,
+cyan,
+yellow,
+lime
+);
+
+border-radius:20px;
+
+}
+
+/* Selection */
+
+::selection{
+
+background:#ff0080;
+color:white;
+
+}
+
+/* Responsive */
+
+@media(max-width:1100px){
+
+.hero{
+
+flex-direction:column;
+text-align:center;
+padding-top:170px;
+
+}
+
+.left{
+
+width:100%;
+
+}
+
+.right{
+
+width:100%;
+margin-top:60px;
+
+}
+
+.left h1{
+
+font-size:60px;
+
+}
+
+.left h2{
+
+font-size:30px;
+
+}
+
+.left p{
+
+font-size:18px;
+
+}
+
+.buttons{
+
+justify-content:center;
+
+}
+
+.social{
+
+display:none;
+
+}
+
+}
+
+@media(max-width:768px){
+
+header{
+
+padding:15px 5%;
+
+}
+
+nav{
+
+display:none;
+
+}
+
+.logo{
+
+font-size:28px;
+
+}
+
+.book-btn{
+
+padding:10px 20px;
+font-size:14px;
+
+}
+
+.left h1{
+
+font-size:46px;
+
+}
+
+.left h2{
+
+font-size:24px;
+
+}
+
+.left p{
+
+font-size:16px;
+line-height:28px;
+
+}
+
+.circle{
+
+width:230px;
+height:230px;
+font-size:90px;
+
+}
+
+.circle::before{
+
+width:260px;
+height:260px;
+
+}
+
+.buttons{
+
+flex-direction:column;
+
+}
+
+.btn1,
+.btn2{
+
+width:220px;
+margin:auto;
+
+}
+
+.light-line{
+
+transform:scale(.8);
+
+}
+
+}
+
+@media(max-width:480px){
+
+.left h1{
+
+font-size:38px;
+
+}
+
+.left h2{
+
+font-size:20px;
+
+}
+
+.left p{
+
+font-size:15px;
+
+}
+
+.logo{
+
+font-size:24px;
+
+}
+
+.circle{
+
+width:180px;
+height:180px;
+font-size:70px;
+
+}
+
+.scroll{
+
+display:none;
+
+}
+
+}
