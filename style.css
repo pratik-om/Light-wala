@@ -328,3 +328,252 @@ transform:rotate(360deg);
 }
 
 }
+
+/* ==========================================
+   LIGHTWALA STYLE.CSS PART 2
+   Hanging Bulbs + Floating Lights + Social
+========================================== */
+
+/* Hanging Light Line */
+
+.light-line{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    display:flex;
+    justify-content:space-evenly;
+    align-items:flex-start;
+    z-index:999;
+    pointer-events:none;
+}
+
+.wire{
+    width:3px;
+    height:60px;
+    background:#777;
+}
+
+/* Bulbs */
+
+.bulb{
+    width:22px;
+    height:22px;
+    border-radius:50%;
+    position:relative;
+    animation:blink 2s infinite alternate;
+}
+
+.bulb::before{
+    content:"";
+    position:absolute;
+    width:10px;
+    height:8px;
+    background:#444;
+    top:-7px;
+    left:6px;
+    border-radius:2px;
+}
+
+/* Colors */
+
+.red{
+    background:#ff0033;
+    box-shadow:0 0 25px #ff0033;
+}
+
+.yellow{
+    background:#ffd700;
+    box-shadow:0 0 25px #ffd700;
+}
+
+.green{
+    background:#00ff66;
+    box-shadow:0 0 25px #00ff66;
+}
+
+.blue{
+    background:#00d9ff;
+    box-shadow:0 0 25px #00d9ff;
+}
+
+.pink{
+    background:#ff00aa;
+    box-shadow:0 0 25px #ff00aa;
+}
+
+.orange{
+    background:#ff7700;
+    box-shadow:0 0 25px #ff7700;
+}
+
+.purple{
+    background:#b400ff;
+    box-shadow:0 0 25px #b400ff;
+}
+
+.cyan{
+    background:#00ffff;
+    box-shadow:0 0 25px #00ffff;
+}
+
+@keyframes blink{
+
+0%{
+transform:scale(1);
+filter:brightness(1);
+}
+
+100%{
+transform:scale(1.25);
+filter:brightness(1.7);
+}
+
+}
+
+/* Floating Lights */
+
+.floating{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(2px);
+    animation:float 8s linear infinite;
+}
+
+.f1{
+    width:18px;
+    height:18px;
+    background:#ff0080;
+    left:8%;
+    top:85%;
+}
+
+.f2{
+    width:15px;
+    height:15px;
+    background:#00ffff;
+    left:22%;
+    top:92%;
+    animation-delay:1s;
+}
+
+.f3{
+    width:20px;
+    height:20px;
+    background:#ffee00;
+    left:45%;
+    top:88%;
+    animation-delay:2s;
+}
+
+.f4{
+    width:16px;
+    height:16px;
+    background:#00ff66;
+    left:63%;
+    top:94%;
+    animation-delay:3s;
+}
+
+.f5{
+    width:18px;
+    height:18px;
+    background:#ff6600;
+    left:82%;
+    top:90%;
+    animation-delay:4s;
+}
+
+.f6{
+    width:22px;
+    height:22px;
+    background:#b400ff;
+    left:94%;
+    top:95%;
+    animation-delay:5s;
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(0);
+opacity:0;
+}
+
+20%{
+opacity:1;
+}
+
+80%{
+opacity:1;
+}
+
+100%{
+transform:translateY(-850px);
+opacity:0;
+}
+
+}
+
+/* Social Icons */
+
+.social{
+    position:fixed;
+    right:25px;
+    top:50%;
+    transform:translateY(-50%);
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+    z-index:1000;
+}
+
+.social a{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    text-decoration:none;
+    font-size:22px;
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(8px);
+    transition:.4s;
+}
+
+.social a:hover{
+    transform:scale(1.15);
+    box-shadow:0 0 25px cyan;
+    background:cyan;
+    color:black;
+}
+
+/* Scroll Text */
+
+.scroll{
+    position:absolute;
+    bottom:30px;
+    left:50%;
+    transform:translateX(-50%);
+    color:#ffffff;
+    letter-spacing:3px;
+    animation:upDown 1.5s infinite;
+}
+
+@keyframes upDown{
+
+0%{
+transform:translate(-50%,0);
+}
+
+50%{
+transform:translate(-50%,-12px);
+}
+
+100%{
+transform:translate(-50%,0);
+}
+
+}
